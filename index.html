@@ -10,7 +10,56 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@200;300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/css/styles.css" />
+    <title>MAMMA MIA Resturant</title>
   </head>
-  <body></body>
+  <body>
+    <!-- navBar -->
+    <header class="navigation">
+      <div class="top-nav">
+        <div class="top-nav__left">
+          <div class="location row">
+            <img src="./images/map-pin.svg" alt="svg map pin" />
+            <span>123 Example St, Mansoura, Egypt</span>
+          </div>
+          <div class="state row">
+            <img src="./images/clock.svg" alt="svg clock" />
+            <span>Open Now</span>
+          </div>
+        </div>
+        <div class="top-nav__right"><a href="./home-ar.html">عربي</a></div>
+      </div>
+      <nav class="main-nav">
+        <div class="main-nav__links">
+          <div class="hambrger-menu" id="menuIcon">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+          <ul class="links">
+            <li><a href="#">find a table</a></li>
+            <li><a href="#">order online</a></li>
+            <li><a href="tel:0020123456789">0020123456789</a></li>
+          </ul>
+        </div>
+        <div class="main-nav__logo"><a href="./index.html">MAMMA MIA</a></div>
+      </nav>
+    </header>
+    <!-- end of navBar -->
+
+    <!-- full men -->
+    <div class="full-menu full-menu--disable" id="fullMenu">
+      <div class="full-menu__close" id="closeFullMenu">
+        <img src="./images/x.svg" alt="svg close icon" />
+      </div>
+      <ul class="full-menu__links">
+        <li><a href="#">find a table</a></li>
+        <li><a href="#">order online</a></li>
+        <li><a href="tel:0020123456789">0020123456789</a></li>
+      </ul>
+    </div>
+    <!-- end of full men -->
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>
