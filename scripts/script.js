@@ -23,15 +23,16 @@ const rightArrow = document.querySelector("#rightArrow");
 
 let counter = 1;
 
-setInterval(() => {
-  changeSlide(slides[counter]);
+// TODO uncomment this
+// setInterval(() => {
+//   changeSlide(slides[counter]);
 
-  if (counter === 3) {
-    counter = 0;
-  } else {
-    counter++;
-  }
-}, 10000);
+//   if (counter === 3) {
+//     counter = 0;
+//   } else {
+//     counter++;
+//   }
+// }, 10000);
 
 leftArrow.addEventListener("click", () => {
   if (counter < 0) {
