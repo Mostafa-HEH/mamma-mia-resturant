@@ -1,0 +1,8 @@
+.section-title {
+  font-size: 2rem;
+
+  @media screen and(max-width:$sm) {
+    text-align: center;
+    padding: 0 16px;
+  }
+}
