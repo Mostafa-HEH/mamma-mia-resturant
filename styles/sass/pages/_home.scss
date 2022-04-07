@@ -1,0 +1,184 @@
+// Hero section
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background-color: $primary;
+
+  @media screen and (max-width: $md) {
+    flex-direction: column;
+  }
+
+  &__full-view {
+    height: 100%;
+    width: 84%;
+    position: relative;
+    overflow: hidden;
+
+    @media screen and (max-width: $md) {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    & .item {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transition: transform 0.5s ease-in-out;
+      transform: translateX(110%);
+
+      &__image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &__description {
+        position: absolute;
+        bottom: 125px;
+        left: 10%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        z-index: 1;
+        color: $white;
+
+        @media screen and (max-width: $md) {
+          bottom: 48px;
+          gap: 0;
+          left: unset;
+          padding: 0 42px;
+        }
+
+        & h2 {
+          color: $primary;
+          font-family: $en-logo;
+          font-size: 5rem;
+
+          @media screen and (max-width: $sm) {
+            font-size: 3rem;
+          }
+        }
+
+        & p {
+          font-family: $en-primary;
+          font-size: 1.5rem;
+          font-weight: 700;
+          line-height: 28px;
+          max-width: 640px;
+
+          @media screen and (max-width: $sm) {
+            font-size: 1rem;
+            line-height: 19px;
+          }
+        }
+      }
+
+      &--active {
+        transform: translateX(0);
+
+        &::after {
+          content: "";
+          background: rgb(0, 0, 0);
+          background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          height: 60%;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+
+    & .arrows {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2px;
+
+      & .arrow {
+        background-color: rgba(255, 255, 255, 0.729);
+        padding: 8px 24px;
+        cursor: pointer;
+        @media screen and (max-width: $sm) {
+          padding: 4px 18px;
+        }
+      }
+    }
+  }
+
+  &__review {
+    height: 100%;
+    width: 16%;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $md) {
+      flex-direction: row;
+      width: 100%;
+      height: 18%;
+    }
+
+    @media screen and (max-width: $sm) {
+      height: 14%;
+    }
+
+    & .item {
+      height: 25%;
+      position: relative;
+      cursor: pointer;
+
+      @media screen and (max-width: $md) {
+        height: 100%;
+        width: 25%;
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      &--active::after {
+        animation-name: itemActive;
+        animation-duration: 10s;
+      }
+
+      @keyframes itemActive {
+        from {
+          height: 100%;
+        }
+        to {
+          height: 0%;
+        }
+      }
+    }
+  }
+}
+// end of hero section
