@@ -18,8 +18,8 @@ menuIcon.addEventListener("click", () => {
 // hero section
 const slides = document.querySelectorAll(".hero-section__full-view .item");
 const reviews = document.querySelectorAll(".hero-section__review .item");
-const leftArrow = document.querySelector("#leftArrow");
-const rightArrow = document.querySelector("#rightArrow");
+const leftArrow = document.querySelector(".hero-section #leftArrow");
+const rightArrow = document.querySelector(".hero-section #rightArrow");
 
 let counter = 1;
 
@@ -63,4 +63,33 @@ const changeSlide = (current, counter) => {
       review.classList.add("item--active");
     }
   });
+};
+
+// testmonial section
+const tabs = document.querySelectorAll(".tabs .tab");
+const comments = document.querySelectorAll(".comments .comment");
+
+let tabCounter = 0;
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    changeComment(tab);
+  });
+});
+
+// TODO uncomment this
+// setInterval(() => {
+//   changeComment(tabs[tabCounter]);
+//   if (tabCounter === 2) {
+//     tabCounter = 0;
+//   } else {
+//     tabCounter++;
+//   }
+// }, 5000);
+
+const changeComment = (tab) => {
+  comments.forEach((comment) => comment.classList.remove("comment--active"));
+  tabs.forEach((tab) => tab.classList.remove("tab--active"));
+  tab.classList.add("tab--active");
+  comments[tab.dataset.id - 1].classList.add("comment--active");
 };
