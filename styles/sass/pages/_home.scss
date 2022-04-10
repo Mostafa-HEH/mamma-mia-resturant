@@ -568,4 +568,186 @@
 }
 // end of find tablle
 
+// order online
+.order-online {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $praimary-bolder;
+  max-width: 1110px;
+  width: 100%;
+  margin-bottom: 125px;
+  gap: 48px;
+
+  & .order-online__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    & .arrows {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2px;
+      justify-content: flex-end;
+
+      & .arrow {
+        background-color: $praimary-bolder;
+        color: $white;
+        padding: 4px 24px;
+        cursor: pointer;
+
+        @media screen and (max-width: $md) {
+          display: none;
+        }
+
+        &--deactive {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+    }
+    & .view {
+      display: flex;
+      flex-direction: row;
+      gap: 64px;
+
+      @media screen and (max-width: $md) {
+        flex-direction: column;
+      }
+
+      @media screen and (max-width: $sm) {
+        gap: 24px;
+      }
+
+      &__tabs {
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        color: #000;
+        font-size: 1rem;
+        list-style: none;
+
+        @media screen and (max-width: $md) {
+          flex-direction: row;
+          justify-content: center;
+        }
+
+        & li {
+          height: 32px;
+          width: 125px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          @media screen and (max-width: $sm) {
+            width: 100%;
+          }
+
+          &.active {
+            background-color: $praimary-bolder;
+            color: $white;
+          }
+        }
+      }
+
+      &__row {
+        overflow: hidden;
+
+        & .row {
+          display: none;
+          flex-direction: row;
+          gap: 16px;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          -webkit-overflow-scrolling: touch;
+          scroll-behavior: smooth;
+
+          &--active {
+            display: flex;
+          }
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          &__card {
+            position: relative;
+            width: 230px;
+            height: 250px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            box-shadow: 0px 0 8px 0 rgba(0, 0, 0, 0.25);
+
+            &::after {
+              content: "";
+              background: rgb(0, 0, 0);
+              background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 1) 0%,
+                rgba(0, 0, 0, 0) 100%
+              );
+              height: 60%;
+              width: 100%;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+            }
+
+            & .image {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: inherit;
+              height: 100%;
+
+              & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+
+            & .description {
+              position: relative;
+              color: #fff;
+              width: inherit;
+              padding: 0 16px 16px 16px;
+              z-index: 1;
+              display: flex;
+              flex-direction: column;
+              gap: 6px;
+
+              & .name {
+                font-weight: 500;
+                font-size: 1.1rem;
+              }
+
+              & .price {
+                font-family: $en-price;
+                font-weight: 500;
+              }
+
+              & .button {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 8px;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// End of order online
+
 // end of find table & order online
