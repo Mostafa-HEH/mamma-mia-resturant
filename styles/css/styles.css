@@ -1258,4 +1258,137 @@ p {
   font-weight: 500;
 }
 
+.keep-in-touch {
+  font-family: "Work Sans", sans-serif;
+  background-color: #d19211;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  padding: 6rem 16px;
+}
+.keep-in-touch .connects {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+.keep-in-touch .connects__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.keep-in-touch .connects__row .icon {
+  width: 16px;
+}
+.keep-in-touch .connects__row .icon svg {
+  width: 100%;
+}
+.keep-in-touch .connects__row .description {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.keep-in-touch .connects__row .description a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.keep-in-touch .frame {
+  color: #000000;
+  background-color: #ffffff;
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 42px 94px;
+  gap: 24px;
+  max-width: 700px;
+  margin: auto;
+  border: 32px solid #e3ab7c;
+  box-sizing: border-box;
+  position: relative;
+}
+@media screen and (max-width: 600px) {
+  .keep-in-touch .frame {
+    width: 100%;
+    align-items: center;
+    padding-left: unset;
+    padding-right: unset;
+  }
+}
+.keep-in-touch .frame .iron {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  background-color: #000000;
+  clip-path: polygon(0 100%, 0 0, 100% 0, 100% 23%, 24% 23%, 24% 100%);
+}
+.keep-in-touch .frame .iron span {
+  width: 10px;
+  height: 10px;
+  background-color: #e0e0e0;
+  display: block;
+  border-radius: 60%;
+  opacity: 0.6;
+  position: absolute;
+}
+.keep-in-touch .frame .iron span:nth-of-type(1) {
+  top: 2px;
+  right: 18px;
+}
+.keep-in-touch .frame .iron span:nth-of-type(2) {
+  top: 4px;
+  left: 4px;
+}
+.keep-in-touch .frame .iron span:nth-of-type(3) {
+  left: 2px;
+  bottom: 18px;
+}
+.keep-in-touch .frame .iron-top-left {
+  top: -22px;
+  left: -22px;
+}
+.keep-in-touch .frame .iron-top-right {
+  top: -22px;
+  right: -22px;
+  transform: rotate(90deg);
+}
+.keep-in-touch .frame .iron-bottom-left {
+  bottom: -22px;
+  left: -22px;
+  transform: rotate(-90deg);
+}
+.keep-in-touch .frame .iron-bottom-right {
+  bottom: -22px;
+  right: -22px;
+  transform: rotate(180deg);
+}
+.keep-in-touch .frame h6 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.keep-in-touch .frame .content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.keep-in-touch .frame .content .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+@media screen and (max-width: 400px) {
+  .keep-in-touch .frame .content .row__space {
+    display: none;
+  }
+}
+.keep-in-touch .frame .content .row.row--closing {
+  color: #f31700;
+}
+
 /*# sourceMappingURL=styles.css.map */
