@@ -906,3 +906,117 @@
   }
 }
 // end of keep in touch section
+
+// gallery section
+.gallery-section {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  &__bg-frame {
+    height: 42%;
+    background-color: $praimary-bolder;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(9, auto);
+    gap: 8px;
+    max-width: 1110px;
+    padding: 0 32px;
+
+    @media screen and (max-width: $sm) {
+      grid-template-columns: repeat(1, auto);
+    }
+
+    & .image-container {
+      height: 250px;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &:nth-of-type(1) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        @media screen and (max-width: $sm) {
+          grid-column-start: unset;
+          grid-column-end: unset;
+        }
+      }
+
+      &:nth-of-type(3) {
+        grid-column-start: 5;
+        grid-column-end: 8;
+        @media screen and (max-width: $sm) {
+          grid-column-start: unset;
+          grid-column-end: unset;
+        }
+      }
+
+      &:nth-of-type(4) {
+        grid-column-start: 8;
+        grid-column-end: 10;
+        @media screen and (max-width: $sm) {
+          grid-column-start: unset;
+          grid-column-end: unset;
+        }
+      }
+
+      &:nth-of-type(6) {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        @media screen and (max-width: $sm) {
+          grid-column-start: unset;
+          grid-column-end: unset;
+        }
+      }
+
+      &:nth-of-type(7) {
+        grid-column-start: 4;
+        grid-column-end: 6;
+        @media screen and (max-width: $sm) {
+          grid-column-start: unset;
+          grid-column-end: unset;
+        }
+      }
+
+      &:nth-of-type(9) {
+        grid-column-start: 7;
+        grid-column-end: 10;
+        @media screen and (max-width: $sm) {
+          grid-column-start: unset;
+          grid-column-end: unset;
+        }
+      }
+
+      &:nth-of-type(10) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        @media screen and (max-width: $sm) {
+          grid-column-start: unset;
+          grid-column-end: unset;
+        }
+      }
+
+      &:nth-of-type(12) {
+        grid-column-start: 5;
+        grid-column-end: 8;
+        @media screen and (max-width: $sm) {
+          grid-column-start: unset;
+          grid-column-end: unset;
+        }
+      }
+    }
+  }
+}
+// end of gallery section
