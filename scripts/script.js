@@ -1,3 +1,13 @@
+const navBar = document.querySelector(".navigation");
+
+window.addEventListener("scroll", () => {
+  if (this.scrollY >= 700) {
+    navBar.classList.add("navigation--on-scroll");
+  } else {
+    navBar.classList.remove("navigation--on-scroll");
+  }
+});
+
 // nav full cover menu
 const fullMenu = document.querySelector("#fullMenu");
 const menuIcon = document.querySelector("#menuIcon");

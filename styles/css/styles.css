@@ -356,7 +356,11 @@ p {
   position: fixed;
   z-index: 1994;
   width: 100%;
+  transition: top 0.5s ease-in-out;
   top: 32px;
+}
+.navigation--on-scroll {
+  top: 0;
 }
 .navigation .top-nav {
   display: flex;
