@@ -751,3 +751,158 @@
 // End of order online
 
 // end of find table & order online
+
+// keep in touch section
+.keep-in-touch {
+  font-family: $en-primary;
+  background-color: $praimary-bolder;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  padding: 6rem 16px;
+
+  & .connects {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+
+    &__row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+
+      & .icon {
+        width: 16px;
+
+        & svg {
+          width: 100%;
+        }
+      }
+
+      & .description {
+        font-weight: 600;
+        font-size: 1rem;
+
+        & a {
+          color: inherit;
+          text-decoration: inherit;
+        }
+      }
+    }
+  }
+
+  & .frame {
+    color: $black;
+    background-color: $white;
+    font-family: $en-primary;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 42px 94px;
+    gap: 24px;
+    max-width: 700px;
+    margin: auto;
+    border: 32px solid $frame-wood;
+    box-sizing: border-box;
+    position: relative;
+
+    @media screen and (max-width: $sm) {
+      width: 100%;
+      align-items: center;
+      padding-left: unset;
+      padding-right: unset;
+    }
+
+    & .iron {
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      background-color: $black;
+      clip-path: polygon(0 100%, 0 0, 100% 0, 100% 23%, 24% 23%, 24% 100%);
+
+      & span {
+        width: 10px;
+        height: 10px;
+        background-color: $frame-nail;
+        display: block;
+        border-radius: 60%;
+        opacity: 0.6;
+        position: absolute;
+
+        &:nth-of-type(1) {
+          top: 2px;
+          right: 18px;
+        }
+
+        &:nth-of-type(2) {
+          top: 4px;
+          left: 4px;
+        }
+
+        &:nth-of-type(3) {
+          left: 2px;
+          bottom: 18px;
+        }
+      }
+    }
+
+    & .iron-top-left {
+      top: -22px;
+      left: -22px;
+    }
+
+    & .iron-top-right {
+      top: -22px;
+      right: -22px;
+      transform: rotate(90deg);
+    }
+
+    & .iron-bottom-left {
+      bottom: -22px;
+      left: -22px;
+      transform: rotate(-90deg);
+    }
+
+    & .iron-bottom-right {
+      bottom: -22px;
+      right: -22px;
+      transform: rotate(180deg);
+    }
+
+    & h6 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    & .content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+
+      & .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+
+        &__space {
+          @media screen and (max-width: 400px) {
+            display: none;
+          }
+        }
+
+        &.row--closing {
+          color: $red;
+        }
+      }
+    }
+  }
+}
+// end of keep in touch section
