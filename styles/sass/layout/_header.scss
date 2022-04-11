@@ -5,11 +5,14 @@
   z-index: 1994;
   width: 100%;
   transition: top 0.5s ease-in-out;
-
   top: 32px;
 
   &--on-scroll {
     top: 0;
+  }
+
+  &-ar {
+    font-family: $ar-primary;
   }
 
   // top navbar
@@ -49,6 +52,10 @@
         flex-direction: row;
         align-items: center;
         gap: 4px;
+
+        &-ar {
+          flex-direction: row-reverse;
+        }
 
         &.state {
           @media screen and (max-width: $sm) {
@@ -203,6 +210,10 @@
   justify-content: center;
   transition: transform 0.5s ease-in-out;
   transform: translateY(0);
+
+  &-ar {
+    font-family: $ar-primary;
+  }
 
   &__close {
     position: absolute;

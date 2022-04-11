@@ -8,6 +8,10 @@ footer {
   justify-content: space-between;
   font-family: $en-primary;
 
+  &.ar {
+    font-family: $ar-primary;
+  }
+
   @media screen and (max-width: $md) {
     display: flex;
     flex-direction: column-reverse;
