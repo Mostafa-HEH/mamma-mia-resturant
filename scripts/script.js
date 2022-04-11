@@ -1,3 +1,11 @@
+// loading
+const loading = document.getElementById("loading");
+
+window.addEventListener("load", () => {
+  loading.style.display = "none";
+});
+
+// navbar scroll
 const navBar = document.querySelector(".navigation");
 
 window.addEventListener("scroll", () => {
