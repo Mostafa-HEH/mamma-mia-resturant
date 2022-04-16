@@ -41,16 +41,16 @@ const rightArrow = document.querySelector(".hero-section #rightArrow");
 
 let counter = 1;
 
-// TODO uncomment this
-// setInterval(() => {
-//   changeSlide(slides[counter]);
+TODO uncomment this
+setInterval(() => {
+  changeSlide(slides[counter]);
 
-//   if (counter === 3) {
-//     counter = 0;
-//   } else {
-//     counter++;
-//   }
-// }, 10000);
+  if (counter === 3) {
+    counter = 0;
+  } else {
+    counter++;
+  }
+}, 10000);
 
 leftArrow.addEventListener("click", () => {
   if (counter < 0) {
@@ -95,15 +95,15 @@ tabs.forEach((tab) => {
   });
 });
 
-// TODO uncomment this
-// setInterval(() => {
-//   changeComment(tabs[tabCounter]);
-//   if (tabCounter === 2) {
-//     tabCounter = 0;
-//   } else {
-//     tabCounter++;
-//   }
-// }, 5000);
+TODO uncomment this
+setInterval(() => {
+  changeComment(tabs[tabCounter]);
+  if (tabCounter === 2) {
+    tabCounter = 0;
+  } else {
+    tabCounter++;
+  }
+}, 5000);
 
 const changeComment = (tab) => {
   comments.forEach((comment) => comment.classList.remove("comment--active"));
