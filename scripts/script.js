@@ -41,7 +41,6 @@ const rightArrow = document.querySelector(".hero-section #rightArrow");
 
 let counter = 1;
 
-TODO uncomment this
 setInterval(() => {
   changeSlide(slides[counter]);
 
@@ -95,7 +94,6 @@ tabs.forEach((tab) => {
   });
 });
 
-TODO uncomment this
 setInterval(() => {
   changeComment(tabs[tabCounter]);
   if (tabCounter === 2) {
