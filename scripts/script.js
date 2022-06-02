@@ -41,7 +41,10 @@ const rightArrow = document.querySelector(".hero-section #rightArrow");
 
 let counter = 1;
 
+<<<<<<< HEAD
 TODO uncomment this
+=======
+>>>>>>> f4de536d187bb4220dd95576427a7c173575689f
 setInterval(() => {
   changeSlide(slides[counter]);
 
@@ -95,7 +98,10 @@ tabs.forEach((tab) => {
   });
 });
 
+<<<<<<< HEAD
 TODO uncomment this
+=======
+>>>>>>> f4de536d187bb4220dd95576427a7c173575689f
 setInterval(() => {
   changeComment(tabs[tabCounter]);
   if (tabCounter === 2) {
