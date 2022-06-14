@@ -41,10 +41,6 @@ const rightArrow = document.querySelector(".hero-section #rightArrow");
 
 let counter = 1;
 
-<<<<<<< HEAD
-TODO uncomment this
-=======
->>>>>>> f4de536d187bb4220dd95576427a7c173575689f
 setInterval(() => {
   changeSlide(slides[counter]);
 
@@ -98,56 +94,3 @@ tabs.forEach((tab) => {
   });
 });
 
-<<<<<<< HEAD
-TODO uncomment this
-=======
->>>>>>> f4de536d187bb4220dd95576427a7c173575689f
-setInterval(() => {
-  changeComment(tabs[tabCounter]);
-  if (tabCounter === 2) {
-    tabCounter = 0;
-  } else {
-    tabCounter++;
-  }
-}, 5000);
-
-const changeComment = (tab) => {
-  comments.forEach((comment) => comment.classList.remove("comment--active"));
-  tabs.forEach((tab) => tab.classList.remove("tab--active"));
-  tab.classList.add("tab--active");
-  comments[tab.dataset.id - 1].classList.add("comment--active");
-};
-
-// order online
-const orderOnlineLeft = document.querySelector(
-  ".order-online .arrows #leftArrow"
-);
-const orderOnlineRight = document.querySelector(
-  ".order-online .arrows #rightArrow"
-);
-const rowContainer = document.querySelector(".order-online .row");
-
-orderOnlineLeft.addEventListener("click", () => {
-  rowContainer.scrollLeft = rowContainer.scrollLeft - 100;
-});
-
-orderOnlineRight.addEventListener("click", () => {
-  rowContainer.scrollLeft = rowContainer.scrollLeft + 100;
-});
-
-const viewTabs = document.querySelectorAll(".order-online .view__tabs li");
-const rows = document.querySelectorAll(".order-online .row");
-
-viewTabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    viewTabs.forEach((tab) => tab.classList.remove("active"));
-    tab.classList.add("active");
-    rows.forEach((row) => {
-      if (row.dataset.id === tab.dataset.id) {
-        row.classList.add("row--active");
-      } else {
-        row.classList.remove("row--active");
-      }
-    });
-  });
-});
